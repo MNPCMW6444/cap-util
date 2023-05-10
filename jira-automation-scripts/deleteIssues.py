@@ -10,13 +10,13 @@ jira_api_token = os.environ['TOKEN']
 jira = JIRA(server=jira_url, basic_auth=(jira_username, jira_api_token))
 
 # Issues to be deleted
-issues_to_delete = ["DEV-{i}" for i in range(60, 80)]
+issues_to_delete = [f"DEV-{i}" for i in range(60, 80)]
 
 # Delete issues
 for issue_key in issues_to_delete:
     try:
         issue = jira.issue(issue_key)
         issue.delete()
-        print("Deleted issue {issue_key}")
+        print(f"Deleted issue {issue_key}")
     except Exception as e:
-        print("Error deleting issue {issue_key}: {e}")
+        print(f"Error deleting issue {issue_key}: {e}")
