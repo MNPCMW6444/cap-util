@@ -18,7 +18,7 @@ jira = JIRA(server=jira_url, basic_auth=(jira_username, jira_api_token))
 
 # Replace the following variables with your project and team lead information
 project_key = 'AP'
-team_lead = 'michael@caphub-group.com'
+team_lead = jira_username
 
 
 tasks = [
