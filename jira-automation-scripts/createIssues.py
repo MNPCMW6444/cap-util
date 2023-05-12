@@ -1,12 +1,19 @@
 from jira import JIRA
 import os
+from dotenv import load_dotenv
 
+# Your JIRA instance URL
+
+
+load_dotenv()
+
+
+jira_username = os.getenv('USER')
+jira_api_token = os.getenv('TOKEN')
 
 # Replace the following variables with your JIRA instance information and API credentials
 jira_url = 'https://caphub.atlassian.net'
 # Replace with your admin email address
-jira_username = os.environ['USER']
-jira_api_token = os.environ['TOKEN']
 jira = JIRA(server=jira_url, basic_auth=(jira_username, jira_api_token))
 
 # Replace the following variables with your project and team lead information
