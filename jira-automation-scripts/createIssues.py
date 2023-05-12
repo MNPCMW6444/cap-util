@@ -18,7 +18,6 @@ jira = JIRA(server=jira_url, basic_auth=(jira_username, jira_api_token))
 
 # Replace the following variables with your project and team lead information
 project_key = 'AP'
-team_lead = jira_username
 
 
 tasks = [
@@ -76,9 +75,7 @@ for task in tasks:
         'summary': task['name'],
         'description': task['description'],
         'issuetype': {'name': 'Task'},
-        'assignee': {'name': team_lead},
         'priority': {'name': 'Medium'},
-        'epic': {'key': "AP-82"},
     }
     new_issue = jira.create_issue(fields=issue_dict)
     print(f'JIRA issue created: {new_issue.key} - {task["name"]}')
