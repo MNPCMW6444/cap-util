@@ -17,7 +17,7 @@ jira_api_token = os.getenv('TOKEN')
 jira = JIRA(server=jira_url, basic_auth=(jira_username, jira_api_token))
 
 # Issues to be deleted
-issues_to_delete = [f"DEV-{i}" for i in range(6, 77)]
+issues_to_delete = [f"AP-{i}" for i in range(20, 99)]
 
 # Delete issues
 for issue_key in issues_to_delete:

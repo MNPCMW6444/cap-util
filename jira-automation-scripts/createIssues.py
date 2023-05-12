@@ -5,7 +5,7 @@ import os
 # Replace the following variables with your JIRA instance information and API credentials
 jira_url = 'https://caphub.atlassian.net'
 # Replace with your admin email address
-jira_username = os.environ['USERNAME']
+jira_username = os.environ['USERMAIL']
 jira_api_token = os.environ['TOKEN']
 jira = JIRA(server=jira_url, basic_auth=(jira_username, jira_api_token))
 
