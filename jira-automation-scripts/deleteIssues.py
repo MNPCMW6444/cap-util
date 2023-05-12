@@ -9,7 +9,7 @@ jira_url = "https://caphub.atlassian.net"
 load_dotenv()
 
 
-jira_username = os.getenv('USEREMAIL')
+jira_username = os.getenv('USER')
 jira_api_token = os.getenv('TOKEN')
 
 
